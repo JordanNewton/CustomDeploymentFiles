@@ -25,7 +25,7 @@ $Button1.Content = "Install Windows 11 23H2 Enterprise"
 $Button1.Width = 300
 $Button1.Height = 50
 $Button1.Margin = "0,10,0,10"   # Adds space above and below
-$Button1.Add_Click({ Start-OSDCloud -OSBuild 22631 -Edition "Enterprise" -CloudDriver Dell })
+$Button1.Add_Click({ Start-OSDCloud -OSName 'Windows 11 23H2 x64' -OSLanguage en-GB -OSEdition "Enterprise" -CloudDriver Dell -ZTI })
 $StackPanel.Children.Add($Button1)
 
 # Button for Windows 11 24H2 Enterprise
@@ -34,7 +34,7 @@ $Button2.Content = "Install Windows 11 24H2 Enterprise"
 $Button2.Width = 300
 $Button2.Height = 50
 $Button2.Margin = "0,10,0,10"   # Adds space above and below
-$Button2.Add_Click({ Start-OSDCloud -OSBuild 26100 -Edition "Enterprise" -CloudDriver Dell })
+$Button2.Add_Click({ Start-OSDCloud -OSName 'Windows 11 24H2 x64' -OSLanguage en-GB -OSEdition "Enterprise" -CloudDriver Dell -ZTI})
 $StackPanel.Children.Add($Button2)
 
 # Set Content and Show Window
