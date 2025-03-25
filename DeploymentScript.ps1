@@ -24,7 +24,7 @@ function Start-Installation {
     param ($OSVersion)
     $Window.Close()  # Close the window after selection
     Start-OSDCloud -OSName $OSVersion -OSLanguage en-GB -OSEdition "Enterprise" -ZTI
-    
+    wpeutil reboot
 }
 
 # Button for Windows 11 23H2 Enterprise
