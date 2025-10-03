@@ -27,22 +27,29 @@ function Start-Installation {
     wpeutil reboot
 }
 
-# Button for Windows 11 23H2 Enterprise
+# Button for Windows 11 24H2 Enterprise
 $Button1 = New-Object System.Windows.Controls.Button
-$Button1.Content = "Install Windows 11 23H2 Enterprise"
+$Button1.Content = "Install Windows 11 24H2 Enterprise"
 $Button1.Width = 300
 $Button1.Height = 50
 $Button1.Margin = "0,10,0,10"
-$Button1.Add_Click({ Start-Installation 'Windows 11 23H2 x64' })
+$Button1.Add_Click({ Start-Installation 'Windows 11 24H2 x64' })
 $StackPanel.Children.Add($Button1)
 
-# Button for Windows 11 24H2 Enterprise
+# Button for Windows 11 25H2 Enterprise
 $Button2 = New-Object System.Windows.Controls.Button
-$Button2.Content = "Install Windows 11 24H2 Enterprise"
-$Button2.Width = 300
+$Button2.Width  = 300
 $Button2.Height = 50
 $Button2.Margin = "0,10,0,10"
-$Button2.Add_Click({ Start-Installation 'Windows 11 24H2 x64' })
+$Button2.HorizontalContentAlignment = "Stretch"
+$Button2.VerticalContentAlignment   = "Center"
+$Button2.Padding = "0"
+$tb = New-Object System.Windows.Controls.TextBlock
+$tb.Text = "Install Windows 11 25H2 Enterprise`nTesting Only!"
+$tb.TextAlignment = "Center"
+$tb.TextWrapping  = "Wrap"
+$Button2.Content = $tb
+$Button2.Add_Click({ Start-Installation 'Windows 11 25H2 x64' })
 $StackPanel.Children.Add($Button2)
 
 # Add Warning Label (in red)
@@ -56,3 +63,4 @@ $StackPanel.Children.Add($WarningLabel)
 # Set Content and Show Window
 $Window.Content = $StackPanel
 $Window.ShowDialog()
+
